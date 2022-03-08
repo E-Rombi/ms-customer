@@ -1,0 +1,21 @@
+server:
+  port: 8082
+
+cloud:
+  aws:
+    stack:
+      auto: false
+    region:
+      auto: false
+      static: us-east-1
+    credentials:
+      use-default-aws-credentials-chain: true
+      accesskey: ${AWS_ACCESSKEY_CUSTOMER}
+      secretkey: ${AWS_SECRETKEY_CUSTOMER}
+
+logging:
+  level:
+    com:
+      amazonaws:
+        util:
+          EC2MetadataUtils: error
